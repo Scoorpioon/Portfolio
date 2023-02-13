@@ -7,6 +7,6 @@ Portfólio desenvolvido por mim contendo todas as informações úteis sobre que
 
 
 ## 🛠 Feito com:
--Html
--CSS
--JavaScript
+- Html
+- CSS
+- JavaScript
