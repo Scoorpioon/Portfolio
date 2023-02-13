@@ -1,0 +1,241 @@
+/* Reset e variáveis */
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto sans', sans-serif;
+}
+
+.cor {
+    color: var(--cor-principal);
+    
+}
+
+:root {
+    --cor-principal: rgb(54, 161, 255);
+    --gradiente-principal: linear-gradient(90deg, rgba(55,112,219,1) 0%, rgba(54,164,255,1) 27%, rgba(77,155,233,1) 80%);
+
+}
+
+.borda {
+    border: 2px solid red;
+
+}
+
+/* Conteúdo (Desktop) */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.linha-1 {
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(150,150,150,1) 0%, rgba(221,221,221,1) 80%);
+}
+
+.linha-2 {
+    width: 85%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(150,150,150,1) 80%);
+
+}
+
+/* Conteúdo do Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid gray;
+    /*box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2) */
+}
+
+nav #menu {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+
+#midias-sociais {
+    display: flex;
+}
+
+#midias-sociais li {
+    padding: 0 8px;
+    margin-bottom: 2px;
+}
+
+.link-social {
+    transition: 300ms;
+    font-size: 1.8em;
+    color: black;
+}
+
+.link-social:hover {
+    color: rgb(54, 54, 54);
+    font-size: 2.1em;
+
+}
+
+nav ul li {
+    padding: 0 8px;
+}
+
+#principal {
+    border-radius: 100px;
+    color: black;
+    font-size: 1.8em;
+    line-height: 15px;
+    padding: 7px 10px 7px 10px;
+    margin: 0 5px;
+    text-align: center;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.link-de-navegacao {
+    transition: border-width 400ms linear;
+    color: rgb(62, 62, 62);
+    font-size: 1.1em;
+    text-decoration: none;
+    border: 0 solid gray;
+}
+
+.link-de-navegacao::after {
+    transition: 300ms;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: rgb(111, 111, 111);
+}
+
+.link-de-navegacao:hover:after {
+    width: 100%;
+
+}
+
+#manipulacao-de-cores {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 15px; /* Alinhar com o header */
+    width: 200px;
+}
+
+.botao-de-cor {
+    transition: 200ms;
+    border: 1px solid gray;
+    font-size: 1.7em;
+    color: black;
+    margin: 0 10px;
+    padding: 7px 12px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.botao-de-cor:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+    background-color: rgb(244, 244, 244);
+
+}
+
+.lua {
+    padding: 7px 15px;
+
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    padding: 100px 10px 10px 10px;
+}
+
+#apresentacao {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 150px;
+}
+
+#apresentacao h1 {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+}
+
+#apresentacao h1 span {
+    background: var(--gradiente-principal);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#apresentacao p {
+    font-size: 1.1em;
+    letter-spacing: .5px;
+    line-height: 22px;
+}
+
+/*#apresentacao::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px;
+    background-color: gray;
+    margin: 10px 358px;
+
+} */
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 15px;
+    background-color: rgb(241, 241, 241);
+}
+
+#mapa-do-site {
+    display: flex;
+
+}
+
+#mapa-do-site li {
+    padding: 0 8px;
+
+}
+
+#mapa-do-site li a {
+    color: rgb(92, 92, 92);
+
+}
+
+#mapa-do-site li a:hover {
+    border-bottom: 1px solid rgb(92, 92, 92);
+
+}
+
+/* Responsividade */
+@media (max-width: 1360px) {
+    .link-de-navegacao {
+        background-color: rgba(255, 0, 0, 0.259);
+
+    }
+
+} /* Menu hamburguer */ 
