@@ -25,24 +25,26 @@
 }
 
 /* Conteúdo (Desktop) */
-body {
+body, html {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .linha-1 {
     width: 90%;
     height: 1px;
     background: linear-gradient(90deg, rgba(150,150,150,1) 0%, rgba(221,221,221,1) 80%);
+    margin: 0 0 20px 0;
 }
 
 .linha-2 {
     width: 85%;
     height: 1px;
     background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(150,150,150,1) 80%);
-
+    margin: 0 0 20px 0;
 }
 
 /* Conteúdo do Header */
@@ -52,6 +54,7 @@ header {
     align-items: center;
     width: 100%;
     height: 100px;
+    padding: 20px 0;
     border-bottom: 1px solid gray;
     /*box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2) */
 }
@@ -89,7 +92,7 @@ nav ul li {
 
 #principal {
     border-radius: 100px;
-    color: black;
+    color: var(--cor-principal);
     font-size: 1.8em;
     line-height: 15px;
     padding: 7px 10px 7px 10px;
@@ -157,7 +160,6 @@ main {
     align-items: center;
     width: 100%;
     height: auto;
-    min-height: 300px;
     padding: 100px 10px 10px 10px;
 }
 
@@ -198,16 +200,64 @@ main {
 
 } */
 
+/* Habilidades */
+#habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+.apresentacao-habilidades {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.apresentacao-habilidades h2 {
+    font-size: 2em;
+    margin-bottom: 16px;
+}
+
+.apresentacao-habilidades p {
+    font-size: 1.15em;
+
+}
+
+#lista-de-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    width: 80%;
+    border: 1px solid blue;
+}
+
+#lista-de-habilidades li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: 15px 50px;
+    font-size: 1.2em;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.112);
+}
+
+#lista-de-habilidades li i {
+    font-size: 3em;
+    margin-bottom: 10px;
+
+}
+
 /* Rodapé */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 80px;
-    padding: 0 15px;
+    padding: 35px 15px;
+    margin-top: 100px;
     background-color: rgb(241, 241, 241);
 }
 
