@@ -15,6 +15,7 @@
 
 :root {
     --cor-principal: rgb(54, 161, 255);
+    --cor-titulo: rgb(11, 103, 182);
     --gradiente-principal: linear-gradient(90deg, rgba(55,112,219,1) 0%, rgba(54,164,255,1) 27%, rgba(77,155,233,1) 80%);
 
 }
@@ -31,6 +32,22 @@ body, html {
     width: 100%;
     height: 100vh;
     scroll-behavior: smooth;
+}
+
+.sessao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+}
+
+.titulo {
+    font-size: 2em;
+    margin-bottom: 16px;
+    color: var(--cor-titulo);
+
 }
 
 .linha-1 {
@@ -96,7 +113,7 @@ nav ul li {
     font-size: 1.8em;
     line-height: 15px;
     padding: 7px 10px 7px 10px;
-    margin: 0 5px;
+    margin: 0 3px;
     text-align: center;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
 }
@@ -201,21 +218,9 @@ main {
 } */
 
 /* Habilidades */
-#habilidades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 800px;
-}
 .apresentacao-habilidades {
     text-align: center;
     padding: 20px 0;
-}
-
-.apresentacao-habilidades h2 {
-    font-size: 2em;
-    margin-bottom: 16px;
 }
 
 .apresentacao-habilidades p {
@@ -229,7 +234,7 @@ main {
     flex-wrap: wrap;
     margin-top: 100px;
     width: 80%;
-    border: 1px solid blue;
+    margin-bottom: 150px;
 }
 
 #lista-de-habilidades li {
@@ -237,16 +242,97 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
     margin: 15px 50px;
     font-size: 1.2em;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.112);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.112);
+    border-bottom: 2px solid blue;
 }
 
 #lista-de-habilidades li i {
     font-size: 3em;
     margin-bottom: 10px;
+
+}
+
+.tempo-de-estudo {
+    text-align: center;
+    font-size: .75em;
+    font-weight: bold;
+    bottom: 0;
+    margin-top: 15px;
+}
+
+/* Projetos */
+#projetos h2 {
+    margin-bottom: 50px;
+
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1400px;
+    height: 350px;
+}
+
+.empacotador-de-elementos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+
+}
+
+.galeria-de-projetos {
+    display: flex;
+    flex-flow: row no-wrap;
+    gap: 15px;
+}
+
+.card-de-projeto {
+    text-align: center;
+    border-radius: 20px;
+    width: 475px;
+    max-width: 475px;
+    height: auto;
+    border: 1px solid gray;
+}
+
+.card-de-projeto img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-de-projeto .descricao-card-projeto {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(194, 226, 255);
+    height: 90px;
+}
+
+.item {
+    flex-shrink: 0;
+    transition: all 400ms ease-in-out;
+
+}
+
+.seta-anterior, .seta-posterior {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.3em;
+    color: var(--cor-principal);
+    border: 1px solid gray;
+    border-radius: 100px;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .3);
+}
+
+.seta-posterior {
+    right: 0;
 
 }
 
@@ -282,7 +368,23 @@ footer {
 }
 
 /* Responsividade */
-@media (max-width: 1360px) {
+@media (max-width: 1273px) {
+    #habilidades {
+        margin-bottom: 150px;
+
+    }
+
+}
+
+@media (max-width: 959px) {
+    #habilidades {
+        margin-bottom: 300px;
+
+    }
+
+}
+
+@media (max-width: 1200px) {
     .link-de-navegacao {
         background-color: rgba(255, 0, 0, 0.259);
 
