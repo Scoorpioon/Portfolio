@@ -25,7 +25,7 @@
 
 }
 
-/* Conteúdo (Desktop) */
+/* Estilização principal */
 body, html {
     display: flex;
     flex-direction: column;
@@ -62,6 +62,15 @@ body, html {
     height: 1px;
     background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(150,150,150,1) 80%);
     margin: 0 0 20px 0;
+}
+
+.sessao-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+
 }
 
 /* Conteúdo do Header */
@@ -282,34 +291,99 @@ main {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
-
 }
 
 .galeria-de-projetos {
     display: flex;
     flex-flow: row no-wrap;
-    gap: 15px;
+    gap: 30px;
 }
 
 .card-de-projeto {
     text-align: center;
     border-radius: 20px;
-    width: 475px;
+    width: 445px;
     max-width: 475px;
-    height: auto;
+    height: 300px;
+    background-color: white;
     border: 1px solid gray;
 }
 
-.card-de-projeto img {
+/*.card-de-projeto img {
+    width: 475px;
+    height: 100px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-}
+}*/
 
 .card-de-projeto .descricao-card-projeto {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: start;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: rgb(194, 226, 255);
-    height: 90px;
+}
+
+.descricao-card-projeto h3 {
+    display: inline-block;
+    transition: 230ms;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.descricao-card-projeto h3:hover {
+    color: var(--cor-titulo);
+
+}
+
+.descricao-card-projeto h3:after {
+    content: '\f09b';
+    font-family: FontAwesome;
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms;
+    font-size: .9em;
+    
+}
+
+.descricao-card-projeto h3:hover:after {
+    transition: 200ms;
+    visibility: visible;
+    animation-name: mostrar-github;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@keyframes mostrar-github {
+    from {
+        opacity: 0;
+        margin-left: 0;
+
+    } to {
+        opacity: 1;
+        margin-left: 15px;
+
+    }
+}
+
+@keyframes esconder-github {
+    from {
+        opacity: 1;
+        margin-left: 15px;
+        
+    } to {
+        opacity: 0;
+        margin-left: 0;
+
+    }
+}
+
+.descricao-card-projeto p + p {
+    position: relative;
+    top: 25%;
+    font-size: .9em;
 }
 
 .item {
@@ -331,8 +405,13 @@ main {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, .3);
 }
 
+.seta-anterior {
+    left: -60px;
+
+}
+
 .seta-posterior {
-    right: 0;
+    right: -60px;
 
 }
 
