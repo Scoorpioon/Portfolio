@@ -54,23 +54,21 @@ body, html {
     width: 90%;
     height: 1px;
     background: linear-gradient(90deg, rgba(150,150,150,1) 0%, rgba(221,221,221,1) 80%);
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
 }
 
 .linha-2 {
     width: 85%;
     height: 1px;
     background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(150,150,150,1) 80%);
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
 }
 
-.sessao-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    width: 100%;
-
+.soon {
+    text-align: center;
+    margin-top: 110px;
+    color: rgb(160, 160, 160);
+    font-size: 1.6em;
 }
 
 /* Conteúdo do Header */
@@ -171,6 +169,26 @@ nav ul li {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
     background-color: rgb(244, 244, 244);
 
+}
+
+.mudar-cores {
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+}
+
+.mudar-cores::-webkit-color-swatch {
+    border-radius: 80px;
+    padding: 16px;
+    border: none;
+    position: relative;
+    right: 3px;
+}
+
+.mudar-cores::-moz-color-swatch {
+    border-radius: 80px;
+    padding: 16px;
+    border: none;
 }
 
 .lua {
@@ -274,6 +292,11 @@ main {
 }
 
 /* Projetos */
+#projetos {
+    margin-bottom: 50px;
+
+}
+
 #projetos h2 {
     margin-bottom: 50px;
 
@@ -412,6 +435,32 @@ main {
 
 .seta-posterior {
     right: -60px;
+
+}
+
+/* Contato */
+#contato {
+    align-items: start;
+    padding: 15px;
+}
+
+#contato h2 {
+    font-size: 1.7em;
+    color: rgb(65, 65, 65);
+}
+
+.caixa-de-contato {
+    margin-left: 140px;
+
+}
+
+.contatos ul {
+    font-size: 1.2em;
+
+}
+
+.contatos ul li i {
+    margin-right: 10px;
 
 }
 
