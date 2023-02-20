@@ -1,0 +1,41 @@
+:root {
+    --cor-principal: rgb(54, 161, 255);
+    --cor-titulo: rgb(11, 103, 182);
+    --gradiente-principal: linear-gradient(90deg, rgba(55,112,219,1) 0%, rgba(54,164,255,1) 27%, rgba(77,155,233,1) 80%);
+
+}
+
+#sobremim {
+    margin-bottom: 300px;
+    border: 1px solid red;
+}
+
+.container-apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 0 50px 0;
+    padding: 15px;
+    
+}
+
+.container-apresentacao h1 {
+    font-size: 3em;
+
+}
+
+.container-apresentacao h1:after {
+    content: '';
+    display: flex;
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    margin-top: 15px;
+    background: var(--gradiente-principal);
+
+}
+
+.container-apresentacao p {
+    font-size: 1.25em;
+
+}
